@@ -17,9 +17,8 @@ $(document).ready(function() {
   console.log(candidateNames);
   for (var i = 0; i < candidateNames.length; i++) {
     let name = candidateNames[i];
-    console.log(name);
     let val = contractInstance.totalVotesFor.call(name).toString()
-    console.log(name + val);
+    console.log(name + " " + val);
     $("#" + candidates[name]).html(val);
   }
 });
